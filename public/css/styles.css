@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    justify-content: center;    
+}
+
+.all {
+    border: 3px solid black;
+    height:200px;
+    width: 300px;
+    background-color: darkgrey;
+    justify-content: center;
+    align-items: center;
+}
+
+.book1 {
+    background-color: white;
+    min-height:50px;
+    width:250px;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.book2 {
+    background-color: white;
+    min-height:50px;
+    width:250px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.book3 {
+    background-color: white;
+    min-height:50px;
+    width:250px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* Remove the Hyperlink underline from HREF tags */
+a{
+    text-decoration: none;
+    color:black;
+}
+
+p{
+    color:rgb(3, 161, 82);
+    text-align:center;
+    font-weight: bold
+}
+/* The seperate class is a P tag for the individual EJS views. Since P tag is already green in home EJS i created this class to bypass it */
+.seperate {
+    color:black;
+    text-align:center;
+    font-weight: bold
+}
