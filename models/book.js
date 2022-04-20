@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 
 //create the database schema 
 const bookSchema = mongoose.Schema({
-    name: { type: String, unique: true },
-    author: {type: String, unique: true },
-    link: {type: String, unique: true },
+    name: { type: String, unique: true, require: true },
+    author: {type: String, unique: true, require: true },
+    link: {type: String, unique: true, require: true },
+    
 });
 //create the database model
 const Book = mongoose.model("Book", bookSchema);

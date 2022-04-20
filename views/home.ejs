@@ -8,13 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Click on any book to see the details</p>
+    <h3 class ="home-heading">Click on any book to see the details</h3>
         <div class="container">
-            <div class="all">
                 <!-- Display content from the database -->
-                <div class="book1"><a href="/books/1"><%= data[0].name %></a></div>
-                <div class="book2"><a href="/books/2"><%= data[1].name %></a></div>
-                <div class="book3"><a href="/books/3"><%= data[2].name %></a></div>
+            <div class="all-books">
+                <% let i = 0 %>
+                <% data.forEach(s=> { %>
+                    <% i++ %>
+                <li class="books"><a href="/books/<%= i %>"><%= s.name %></a></li>
+                <% }); %>
+            </div>
+            
+            <div class="nav">
+                <a href="../home">List of Books | </a>
+                <a href="../AddNewBook">Add A Book | </a>
+                <a href="../DeleteABook">Delete A Book</a>
             </div>
         </div>
 </body>

@@ -1,58 +1,84 @@
-.container {
-    display: flex;
-    justify-content: center;    
-}
-
-.all {
+.all-books {
     border: 3px solid black;
-    height:200px;
+    min-height:200px;
     width: 300px;
     background-color: darkgrey;
-    justify-content: center;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.book1 {
+li {
+    list-style-type: none;
+}
+
+.books {
+    text-align: center;
     background-color: white;
     min-height:50px;
-    width:250px;
+    width:275px;
     margin-top: 15px;
-    margin-left: 25px;
+    margin-left: 15px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
-.book2 {
+.books-delete {
     background-color: white;
     min-height:50px;
-    width:250px;
-    margin-left: 25px;
+    width:275px;
+    margin-top: 15px;
+    margin-left: 15px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
-.book3 {
-    background-color: white;
-    min-height:50px;
-    width:250px;
-    margin-left: 25px;
-    margin-bottom: 10px;
-    text-align: center;
-}
 /* Remove the Hyperlink underline from HREF tags */
 a{
     text-decoration: none;
     color:black;
 }
 
-p{
+.home-heading{
     color:rgb(3, 161, 82);
     text-align:center;
-    font-weight: bold
 }
 /* The seperate class is a P tag for the individual EJS views. Since P tag is already green in home EJS i created this class to bypass it */
 .seperate {
     color:black;
     text-align:center;
     font-weight: bold
+}
+.nav {
+    display: block;
+    text-align: center;
+    margin-top: 25px;  
+}
+
+.button {
+    background-color: white;
+    border: solid black 1px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    margin-top: 1%
+}
+
+.add-new-book-all-content {
+    text-align: center;
+}
+
+.delete-button {
+    
+    background-color: white;
+    border: solid black 1px;
+    color: red;
+    font-size: larger;
+    margin-top: 10px;
+    margin-left: 10px  
+}
+
+h3 {
+    text-align: center
 }

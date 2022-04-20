@@ -2,12 +2,8 @@ const Book = require("../models/book");
 
 exports.sendReqParam = (req, res) => {
     //ensure that url requests redirect to the EJS views.    
-    if (req.url == "/home") {
-        Book.find({}, (error, books) => {
-            if (books) res.render("home", {data: books});
-        });
-    }
-    else if (req.url == "/books/1") {
+    
+    if (req.url == "/books/1") {
         //find only one record at a time to display it in the approriate EJS view
         Book.findOne({name:"1984"}, (error, books) => {
             if (books) res.render("book1", {data: books});
@@ -26,5 +22,3 @@ exports.sendReqParam = (req, res) => {
         });
     }
 }
-
-
