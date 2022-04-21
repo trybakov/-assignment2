@@ -47,7 +47,7 @@ module.exports = {
                 })            
             })
             .catch(error => {
-                console.log(`error fetching book by name: ${error.message}`);
+                console.log(`error fetching book by name or link is not valid: ${error.message}`);
                 res.redirect("/home");
             });
     },
