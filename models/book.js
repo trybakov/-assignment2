@@ -33,7 +33,7 @@ Book.create(
     },
 
     function err(error) {
-        if (error.name === 'MongoServerError' && error.code === 11000) {
+        if (error.code === 11000) {
         console.log('Records already exist in database');
         }
     }
