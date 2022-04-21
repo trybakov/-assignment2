@@ -28,6 +28,7 @@ module.exports = {
         })
         .catch(error => {
             console.log(`Error saving book: ${error.message}`);
+            //redirect to home when there is an error saving book
             res.redirect("/home")
             //next(error);
         });
@@ -48,6 +49,7 @@ module.exports = {
             })
             .catch(error => {
                 console.log(`error fetching book by name or link is not valid: ${error.message}`);
+                //redirect to home when there is an error opening the link
                 res.redirect("/home");
             });
     },

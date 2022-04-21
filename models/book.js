@@ -12,7 +12,7 @@ const bookSchema = mongoose.Schema({
 const Book = mongoose.model("Book", bookSchema);
 module.exports = Book;
 
-//create the records manually
+//create the default hardcoded book entries
 Book.create(
     {
         name:"The Brothers Karamazov",
@@ -31,7 +31,7 @@ Book.create(
         author:"Aldous Huxley",
         link:"https://www.amazon.com/Brave-New-World-Aldous-Huxley/dp/0060850523"
     },
-
+    //display error message on console when duplicates exist
     function err(error) {
         if (error.code === 11000) {
         console.log('Records already exist in database');
