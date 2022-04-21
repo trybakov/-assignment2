@@ -76,3 +76,7 @@ a{
 h3 {
     text-align: center
 }
+hr {
+    width: 20%;
+    color: black;
+}
