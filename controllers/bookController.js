@@ -7,7 +7,7 @@ module.exports = {
             res.render("home", { data: book });
         })
         .catch(error => {
-            console.log(`Error fetch books: ${error.message}`)
+            console.log(`Error fetching books: ${error.message}`)
             res.redirect("/home");
         });
     },
@@ -27,7 +27,7 @@ module.exports = {
             next();
         })
         .catch(error => {
-            console.log(`Error saving books: ${error.message}`);
+            console.log(`Error saving book: ${error.message}`);
             next(error);
         });
     },
@@ -36,6 +36,21 @@ module.exports = {
         if (redirectPath) res.redirect(redirectPath);
         else next();
     },
+    
+    show: (req,res, next) => {
+        let bookId = req.params.id;
+        Book.findById(bookId)
+            .then(book => {
+                res.render("books", {
+                    data: book
+                })            
+            })
+            .catch(error => {
+                console.log(`error fetching book by name: ${error.message}`);
+                next(error);
+            });
+    },
+   
     delete: (req, res, next) => {
         let book = req.params.name;
         Book.findOneAndDelete({name:book})

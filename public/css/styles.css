@@ -1,6 +1,6 @@
 .all-books {
     border: 3px solid black;
-    min-height:200px;
+    min-height:100px;
     width: 300px;
     background-color: darkgrey;
     margin-left: auto;
@@ -30,7 +30,6 @@ li {
     margin-bottom: 10px;
 }
 
-/* Remove the Hyperlink underline from HREF tags */
 a{
     text-decoration: none;
     color:black;
@@ -40,12 +39,7 @@ a{
     color:rgb(3, 161, 82);
     text-align:center;
 }
-/* The seperate class is a P tag for the individual EJS views. Since P tag is already green in home EJS i created this class to bypass it */
-.seperate {
-    color:black;
-    text-align:center;
-    font-weight: bold
-}
+
 .nav {
     display: block;
     text-align: center;

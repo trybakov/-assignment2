@@ -10,15 +10,13 @@
 <body>
     <h3 class ="home-heading">Click on any book to see the details</h3>
         <div class="container">
-                <!-- Display content from the database -->
             <div class="all-books">
                 <% let i = 0 %>
                 <% data.forEach(s=> { %>
                     <% i++ %>
-                <li class="books"><a href="/books/<%= i %>"><%= s.name %></a></li>
+                <li class="books"><a href="<%= `/books/${s._id}` %>"><%= s.name %></a></li>
                 <% }); %>
             </div>
-            
             <div class="nav">
                 <a href="../home">List of Books | </a>
                 <a href="../AddNewBook">Add A Book | </a>
