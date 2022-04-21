@@ -1,4 +1,5 @@
 const Book = require("../models/book");
+let alert = require('alert')
 
 module.exports = {
     index: (req, res) => {
@@ -28,7 +29,9 @@ module.exports = {
         })
         .catch(error => {
             console.log(`Error saving book: ${error.message}`);
-            next(error);
+            alert("Book already exists")
+            res.redirect("/home")
+            //next(error);
         });
     },
     redirectView: (req, res, next) => {
@@ -47,6 +50,7 @@ module.exports = {
             })
             .catch(error => {
                 console.log(`error fetching book by name: ${error.message}`);
+                alert("Link is not functional")
                 res.redirect("/home");
             });
     },
