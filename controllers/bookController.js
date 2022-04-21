@@ -47,7 +47,7 @@ module.exports = {
             })
             .catch(error => {
                 console.log(`error fetching book by name: ${error.message}`);
-                next(error);
+                res.redirect("/home");
             });
     },
    
